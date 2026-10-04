@@ -121,6 +121,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .pill.step{padding:0;gap:0;cursor:default}
 .pill.step button{width:26px;height:24px;border:0;background:none;font-size:15px;line-height:1;color:var(--pink);cursor:pointer}
 .pill.step span{min-width:22px;text-align:center}
+/* Celular: nome e preço em cima, botão embaixo (evita sobreposição) */
+@media (max-width:640px){.pinfo{flex-direction:column;align-items:stretch;gap:10px}.pinfo .ctl{width:100%}.pinfo .pill{width:100%}.pinfo .pill.step{justify-content:space-between}.pinfo .pill.step button{flex:1}}
 
 .overlay{position:fixed;inset:0;z-index:90;background:rgba(43,31,26,.4);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
 .drawer{position:fixed;top:0;right:0;bottom:0;z-index:100;width:min(420px,100%);display:flex;flex-direction:column;background:#FFFBF8;box-shadow:-12px 0 40px -16px rgba(43,31,26,.35);transform:translateX(100%);visibility:hidden;transition:transform .3s,visibility .3s}
