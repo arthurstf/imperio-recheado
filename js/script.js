@@ -113,9 +113,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){openCart(false);clo
 $('cname').addEventListener('input',render);$('cnote').addEventListener('input',render);
 $('send').addEventListener('click',e=>{if($('send').getAttribute('aria-disabled')==='true')e.preventDefault()});
 document.querySelectorAll('[data-custom]').forEach(a=>a.href=wa('Olá, Império Recheado! Gostaria de encomendar um bolo personalizado.'));
-render();
-initElastico();
-$('wa-fab').href = wa('Olá! Vim pelo site e gostaria de saber mais sobre os produtos da Império Recheado.');
 
 
 /* ══════════════════════════════════════════════════════════
@@ -176,3 +173,8 @@ function initElastico(){
     FX.j14(btn);
   });
 }
+
+/* Inicialização — roda por último, depois de FX estar definido */
+render();
+initElastico();
+$('wa-fab').href = wa('Olá! Vim pelo site e gostaria de saber mais sobre os produtos da Império Recheado.');
